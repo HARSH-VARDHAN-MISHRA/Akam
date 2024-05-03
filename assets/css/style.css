@@ -173,6 +173,10 @@ header nav .links ul li a:hover{
 .text-content p{
     text-align: justify;
 }
+.about img{
+    padding: 10px ;
+    border: 1px solid #ddd;
+}
 
 /* --- Shipping Page ---  */
 .bg-about.shipping{
@@ -210,6 +214,61 @@ header nav .links ul li a:hover{
 .contact-form textarea:focus{
     opacity: 1;
 }
+
+.contact .modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: rgba(0, 128, 0, 0.8); /* Light green background */
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.contact .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 2px solid #0a7021; /* Darker green border */
+    max-width: 90%; /* Maximum content width */
+    text-align: center;
+    border-radius: 10px;
+    animation: slideIn 0.5s ease forwards;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+}
+
+.contact .modal-content h2 {
+    color: #0a7021; /* Darker green text */
+    margin-bottom: 10px;
+}
+
+.contact .modal-content p {
+    color: #555; /* Dark gray text */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+
+
 
 
 /* ----- Shop Page -----  */
@@ -486,5 +545,8 @@ input[type="number"]::-webkit-outer-spin-button {
 
     .product-info {
         padding: 1rem 0.4rem;
+    }
+    .about img{
+        margin-top: 1rem;
     }
 }

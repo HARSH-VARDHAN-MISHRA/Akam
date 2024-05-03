@@ -32,6 +32,14 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body class="bg-about contact">
+
+     <!-- Popup Modal -->
+    <div id="popupModal" class="modal">
+        <div class="modal-content">
+            <h2>Thank You!</h2>
+            <p>Your message has been successfully sent.</p>
+        </div>
+    </div>
     
     <!-- --- Header ---  -->
     <header>
@@ -62,7 +70,8 @@
                     <div class="col-md-8 mx-auto">
                         <!-- <h2 class="text-center">Contact Us</h2> -->
                         <div class="contact-form">
-                            <form action="https://formsubmit.co/sethi.akam@gmail.com" method="POST">
+                            <!-- <form action="https://formsubmit.co/sethi.akam@gmail.com" method="POST"> -->
+                            <form action="https://formsubmit.co/mharshvardhan40@gmail.com" method="POST">
                                 <div class="form-group">
                                     <input type="text" name="Name" id="name" placeholder="Your Name" required>
                                 </div>
@@ -76,7 +85,7 @@
                                     <textarea id="message" name="Message" rows="5" placeholder="Your Message" required></textarea>
                                 </div>
                                 <input type="hidden" name="_captcha" value="false">
-                                <input type="hidden" name="_next" value="http://127.0.0.1:5500/contact.html">
+                                <input type="hidden" name="_next" value="https://harsh-vardhan-mishra.github.io/Akam/contact.html">
                                 <input type="hidden" name="_template" value="table">
                                 <button type="submit" class="btn btn-primary">Send Message</button>
                             </form>
@@ -91,5 +100,25 @@
     <!-- Script  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
     <script src="./assets/js/script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('form');
+            const modal = document.getElementById('popupModal');
+        
+            form.addEventListener('submit', function(event) {
+                // You can add form submission logic here if needed
+                // For demonstration, let's just show the modal
+                modal.style.display = 'block';
+                // Close the modal after 2 seconds
+                setTimeout(function() {
+                    modal.style.display = 'none';
+                }, 2000);
+            });
+        });
+        
+        
+        
+    </script>
 </body>
 </html>
