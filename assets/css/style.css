@@ -19,7 +19,9 @@
 
     --border-color-1: rgba(101, 119, 134, 0.36);
 }
-
+body{
+    /* background: #f8f9fa; */
+}
 /* --- Universal Styling ---  */
 ol,
 ul {
@@ -148,8 +150,8 @@ header nav .links ul li a:hover{
     padding-top: 4rem;
     padding-bottom: 2rem;
 }
-.bg-about{
-    background: url("../images/about.jpg");
+.bg-about {
+    background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url("../images/about.jpg");
     background-position: center;
     background-size: cover;
     min-height: 100vh;
@@ -174,7 +176,7 @@ header nav .links ul li a:hover{
 
 /* --- Shipping Page ---  */
 .bg-about.shipping{
-    background: url("../images/shippinpage.png");
+    background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url("../images/shippinpage.png");
 }
 
 
@@ -211,25 +213,10 @@ header nav .links ul li a:hover{
 
 
 /* ----- Shop Page -----  */
-/* .product-page{
-    background-color: white;
+.bg-shop {
+    background: linear-gradient(rgba(4, 9, 30, 0.087), rgba(4, 9, 30, 0.192));
 }
-.pro-images .main{
-    border: 1px solid transparent;
-}
-
-.sm-img-grid{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    gap: 0.5rem;
-    margin-top: 1rem;
-}
-.sm-img-grid img{
-    object-fit: contain;
-    cursor: pointer;
-} */
 .product-page {
-    background-color: white;
     padding: 40px 0;
 }
 
@@ -238,23 +225,6 @@ header nav .links ul li a:hover{
     padding: 10px;
 }
 
-.sm-img-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    margin-top: 20px;
-}
-
-.sm-img-grid img {
-    object-fit: contain;
-    cursor: pointer;
-    border: 1px solid transparent;
-    transition: border-color 0.3s ease;
-}
-
-.sm-img-grid img:hover {
-    border-color: #333;
-}
 
 .product-info {
     padding: 0 20px;
@@ -314,27 +284,118 @@ header nav .links ul li a:hover{
     border: 2px solid #333;
 }
 
-.quantity-selector input[type="number"] {
-    width: 60px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
+.quantity-selector {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.quantity-selector h5{
+    margin-bottom: 0rem;
 }
 
-.quantity-selector input[type="number"]:focus {
-    outline: none;
-    border-color: #007bff;
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    background: #f0f0f0;
 }
 
-.quantity-selector h5 {
-    margin-bottom: 5px;
+.quantity-controls input[type="number"] {
+    width: 50px;
+    text-align: center;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    margin: 0 5px;
+    background-color: #f0f0f0;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.quantity-controls button {
+    padding: 8px 12px;
+    background-color: #f0f0f0;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.quantity-controls button:hover {
+    background-color: #e0e0e0;
+}
+
+.minus-btn, .plus-btn {
+    border-radius: 4px;
+}
+
+
+.minus-btn:hover::before, .plus-btn:hover::after {
+    background-color: #333;
+}
+
+.product-info ol{
+    padding-left: 1.2rem;
+    border-top: 2px solid var(--color-light-weight);
+    padding-top: 0.5rem;
+    margin-top: 1rem;
+}
+.product-info ol li{
+    list-style:circle !important;
 }
 
 
 
+.add-to-cart-btn {
+    padding: 10px 20px;
+    background-color: var(--color-red);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin-top: 1rem;
+}
 
+.add-to-cart-btn:hover {
+    background-color: #cc0000;
+    transform: scale(1.05);
+}
 
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    z-index: 9999;
+    display: none;
+}
+
+.popup.show {
+    display: block;
+    animation: fadeIn 0.5s ease forwards, fadeOut 0.5s ease 2s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
 
 
 /* -------- Media Querry ----  */
@@ -358,6 +419,7 @@ header nav .links ul li a:hover{
         top: 8rem;
         transition: all 300ms ease-in;
         background: var(--color-red);
+        background: rgb(101 119 134);
         z-index: 50;
     }
 
@@ -389,6 +451,10 @@ header nav .links ul li a:hover{
     header nav {
         padding: 2rem 2rem;
         background: radial-gradient(black, transparent);
+    }
+    header nav {
+        padding: 2rem;
+        background: linear-gradient(rgb(4 9 30 / 10%), rgb(4 9 30 / 10%));
     }
     .hero .content h1 {
         font-size: 3rem;
