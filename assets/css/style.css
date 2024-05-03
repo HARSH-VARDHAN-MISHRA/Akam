@@ -157,7 +157,7 @@ header nav .links ul li a:hover{
     min-height: 100vh;
 }
 .bg-about.about-page {
-    background: linear-gradient(rgb(4 9 30 / 100%), rgb(4 9 30 / 89%)), url(../images/about.jpg);
+    background: linear-gradient(rgb(0 0 0 / 90%), rgb(0 0 0 / 50%)), url(../images/about.jpg);
 }
 .text-content , .text-content p{
     color: white;
@@ -276,7 +276,8 @@ header nav .links ul li a:hover{
 
 /* ----- Shop Page -----  */
 .bg-shop {
-    background: linear-gradient(rgba(4, 9, 30, 0.087), rgba(4, 9, 30, 0.192));
+    /* background: linear-gradient(rgba(4, 9, 30, 0.087), rgba(4, 9, 30, 0.192)); */
+    background: linear-gradient(rgba(0, 0, 0), rgba(0, 0, 0, 0.192)) ;
 }
 .product-page {
     padding: 40px 0;
