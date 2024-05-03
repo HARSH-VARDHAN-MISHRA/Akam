@@ -151,13 +151,14 @@ header nav .links ul li a:hover{
     padding-bottom: 2rem;
 }
 .bg-about {
-    background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url("../images/about.jpg");
+    /* background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url("../images/about.jpg"); */
     background-position: center;
     background-size: cover;
     min-height: 100vh;
 }
 .bg-about.about-page {
-    background: linear-gradient(rgb(0 0 0 / 90%), rgb(0 0 0 / 50%)), url(../images/about.jpg);
+    /* background: linear-gradient(rgb(0 0 0 / 90%), rgb(0 0 0 / 50%)), url(../images/about.jpg); */
+    background: linear-gradient(rgba(0, 0, 0), rgba(0, 0, 0)) ;
 }
 .text-content , .text-content p{
     color: white;
@@ -183,14 +184,20 @@ header nav .links ul li a:hover{
 
 /* --- Shipping Page ---  */
 .bg-about.shipping{
-    background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url("../images/shippinpage.png");
+    /* background: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url("../images/shippinpage.png"); */
+    background: linear-gradient(rgba(0, 0, 0), rgba(0, 0, 0)) ;
 }
 
 
 
 
 /* ------- Contact Page ----------------  */
-
+.bg-about{
+    background: linear-gradient(rgb(0 0 0 / 90%), rgb(0 0 0 / 50%)), url(../images/about.jpg);
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+}
 
 .contact-info .social-icons{
     display: flex;
@@ -277,8 +284,10 @@ header nav .links ul li a:hover{
 /* ----- Shop Page -----  */
 .bg-shop {
     /* background: linear-gradient(rgba(4, 9, 30, 0.087), rgba(4, 9, 30, 0.192)); */
-    background: linear-gradient(rgba(0, 0, 0), rgba(0, 0, 0, 0.192)) ;
+    background: linear-gradient(rgba(0, 0, 0), rgba(0, 0, 0)) ;
+    color: white;
 }
+
 .product-page {
     padding: 40px 0;
 }
