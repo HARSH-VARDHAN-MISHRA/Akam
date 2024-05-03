@@ -156,6 +156,9 @@ header nav .links ul li a:hover{
     background-size: cover;
     min-height: 100vh;
 }
+.bg-about.about-page {
+    background: linear-gradient(rgb(4 9 30 / 100%), rgb(4 9 30 / 89%)), url(../images/about.jpg);
+}
 .text-content , .text-content p{
     color: white;
 }
