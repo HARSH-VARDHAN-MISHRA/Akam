@@ -58,6 +58,7 @@ header nav {
 
 header nav .logo img {
     height: 75px;
+    object-fit: contain;
 }
 
 header nav .links ul {
