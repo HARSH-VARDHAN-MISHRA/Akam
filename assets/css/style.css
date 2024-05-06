@@ -279,9 +279,52 @@ header nav .links ul li a:hover{
 
 
 
+/* ------ Shop Page ----  */
+.product-grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1rem;
+    padding: 1rem 3rem;
+}
+.product-grid .single-product{
+    transition: all 300ms ease-in;
+    margin-bottom: 2rem;
+}
+.product-grid .single-product:hover{
+    opacity: 0.8;
+}
+.product-grid img{
+    width: 100%;
+}
+.product-grid .name{
+    color: white;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+}
+.product-grid .price{
+    margin-bottom: 0rem;
+    font-size: 1.5rem;
+    padding-left: 0.5rem;
+}
+.product-grid .flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+}
+
+/* --  */
+.single-pro-page h2{
+    text-align: center;
+    margin: 2rem 0rem;
+    font-size: 2.3rem;
+}
 
 
-/* ----- Shop Page -----  */
+
+
+/* ----- Product Page -----  */
+
 .bg-shop {
     /* background: linear-gradient(rgba(4, 9, 30, 0.087), rgba(4, 9, 30, 0.192)); */
     background: linear-gradient(rgba(0, 0, 0), rgba(0, 0, 0)) ;
@@ -475,11 +518,11 @@ input[type="number"]::-webkit-outer-spin-button {
     .hero .content h1 {
         font-size: 4rem;
     }
-
-    /* .hero .content p {
+    .product-grid .name {
+        color: white;
         font-size: 1rem;
-        margin-bottom: 2rem;
-    } */
+        text-transform: uppercase;
+    }
 }
 
 @media only screen and (max-width: 800px) {
@@ -515,6 +558,11 @@ input[type="number"]::-webkit-outer-spin-button {
 
     header .contact-links {
         display: none;
+    }
+
+    /* --- Shop Page ---  */
+    .product-grid {
+        grid-template-columns: repeat(2,1fr);
     }
 }
 
@@ -561,5 +609,12 @@ input[type="number"]::-webkit-outer-spin-button {
     }
     .about img{
         margin-top: 1rem;
+    }
+    .product-grid {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .product-grid img {
+        height: 300px;
+        object-fit: cover;
     }
 }

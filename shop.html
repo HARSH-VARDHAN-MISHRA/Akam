@@ -26,11 +26,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800;900&family=Poppins:wght@100;200;300;400;500;600;700&display=swap" rel="stylesheet">
 
-         
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body class="bg-shop">
@@ -58,98 +53,51 @@
 
     <!-- --- Main Div --  -->
     <div class="main page pt-0">
-        <section class="product-page ">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-5">
-                        <div class="pro-images">
-                            <div class="main">
-                                <div class="owl-carousel owl-theme">
-                                    <img src="./assets/images/product-main-1.jpg" id="MainImg" alt="Product details" width="100%" id="MainImg">
-                                    <img src="./assets/images/product-2.jpg" alt="product-image" class="small-img" >
-                                    <img src="./assets/images/product-3.jpg" alt="product-image" class="small-img" >
-                                    <img src="./assets/images/product-4.jpg" alt="product-image" class="small-img" >
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <div class="product-info">
-                            <h3>Radiant Tanjiro Tee</h3>
-                            <div class="price">
-                                <span class="current-price">$20.99</span>
-                                <span class="original-price"><del>$25</del></span>
-                            </div>
-                            <div class="head">Size: <span id="selected-size">M</span></div>
-                            <div class="sizes">
-                                <button class="size-btn active">S</button>
-                                <button class="size-btn">M</button>
-                                <button class="size-btn">L</button>
-                                <button class="size-btn">XL</button>
-                            </div>
-                            <div class="color-selector">
-                                <h5>Color:</h5>
-                                <div class="color-options">
-                                    <div class="color-option" style="background-color: #fff;"></div>
-                                    <div class="color-option" style="background-color: #313131;"></div>
-                                </div>
-                            </div>
-                            <div class="quantity-selector">
-                                <h5>Quantity:</h5>
-                                <div class="quantity-controls">
-                                    <button class="minus-btn">-</button>
-                                    <input type="number" value="1" min="1">
-                                    <button class="plus-btn">+</button>
-                                </div>
-                            </div>
-                            
-                            <button class="add-to-cart-btn">Add to Cart</button>
-                            <ol>
-                                <li>Short sleeve tee</li>
-                                <li>Printed art on the front and back</li>
-                                <li>Ribbed crew neck</li>
-                                <li>Regular fit</li>
-                                <li>100% cotton</li>
-                                <li>Officially licensed Attack On Titan merchandise.</li>
-                            </ol>
+        <section class=" product-grid">
 
-                        </div>
-                    </div>
+            <a href="./radiant-tanjiro-tee.html" class="single-product">
+                <div class="img">
+                    <img src="./assets/images/product-1.jpg" alt="Radiant Tanjiro Tee">
                 </div>
-            </div>
+                <div class="flex">
+                    <div class="name">Radiant Tanjiro Tee</div>
+                    <div class="price">$20.99</div>
+                </div>
+            </a>
+            <a href="./kokushibo-tee.html" class="single-product">
+                <div class="img">
+                    <img src="./assets/images/kokushibo-tee-1.jpeg" alt="Kokushibo Tee">
+                </div>
+                <div class="flex">
+                    <div class="name">Kokushibo Tee</div>
+                    <div class="price">$25.00</div>
+                </div>
+            </a>
+            <a href="./master-and-student-tee.html" class="single-product">
+                <div class="img">
+                    <img src="./assets/images/master-and-student-tee-1.jpeg" alt="Master And Student Tee">
+                </div>
+                <div class="flex">
+                    <div class="name">Master And Student Tee</div>
+                    <div class="price">$22.00</div>
+                </div>
+            </a>
+            <a href="./grinning-sukuna-tee.html" class="single-product">
+                <div class="img">
+                    <img src="./assets/images/grinning-sukuna-tee-1.jpeg" alt="Grinning Sakuna Tee">
+                </div>
+                <div class="flex">
+                    <div class="name">Grinning Sakuna Tee</div>
+                    <div class="price">$25.00</div>
+                </div>
+            </a>
+
         </section>
-    </div>
-    <div class="popup">
-        Item added to cart!
     </div>
     
 
     <!-- Script  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <script>
-        $('.owl-carousel').owlCarousel({
-            loop:true,
-            margin:10,
-            nav:false,
-            dots:true,
-            autoplay:true,
-            autoplayTimeout:3000,
-            stagePadding:50,
-            responsive:{
-                0:{
-                    items:1
-                },
-                600:{
-                    items:1
-                },
-                1000:{
-                    items:1
-                }
-            }
-        })
-    </script>
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
